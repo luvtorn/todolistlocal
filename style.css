@@ -1,0 +1,195 @@
+body {
+  background: rgba(24, 20, 20, 0.987);
+  color: #1a212f;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e9eff2;
+  width: 500px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  z-index: 0;
+  box-shadow: 2px 2px 7px 7px rgb(155, 155, 155);
+  color: #1a212f;
+  height: 600px;
+  font-size: 20px;
+}
+
+.text-area {
+  position: relative;
+  width: 300px;
+}
+
+.text_input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #1a212f;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #1a212f;
+  outline: none;
+  background: transparent;
+}
+
+.some {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #1a212f;
+  transition: 0.5s;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    width: 650px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 390px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 360px;
+  }
+}
+
+.some {
+  font-size: 20px;
+}
+
+.text-area input:focus ~ label,
+.text-area input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #bdb8b8;
+  font-size: 12px;
+}
+
+.button {
+  --hover-shadows: 7px 7px 20px #f4694d, -7px -7px 20px #f4694d;
+  --accent: #be462e;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 1.1em;
+  background-color: #f4694d;
+  color: white;
+  padding: 12px 20px;
+  transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
+    letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+  box-shadow: 3px 3px 10px #f4694d, -3px -3px 10px #f4694d;
+}
+
+.button:hover {
+  box-shadow: var(--hover-shadows);
+}
+
+.button:active {
+  box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px;
+  background-color: var(--accent);
+  transform: scale(0.95);
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffd9d9;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #8f54a0;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+ul {
+  color: #fff;
+  list-style-type: none;
+  margin-left: -40px;
+  max-height: 300px;
+  overflow: auto;
+  width: 400px;
+}
+
+li {
+  background-color: #f9fbfc;
+  margin-bottom: 5px;
+  color: #1a212f;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 5px;
+  height: 40px;
+}
+
+.asdaas {
+  margin-top: 100px;
+}
+
+.deleteButton {
+  --hover-shadowss: 2px 2px 2px #f4694d, -2px -2px 2px #f4694d;
+  --accent: #be462e;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 1.1em;
+  background-color: #f4694d;
+  color: white;
+  padding: 10px 20px;
+  transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
+    letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.deleteButton:hover {
+  box-shadow: var(--hover-shadows);
+}
+
+.deleteButton:active {
+  box-shadow: var(--hover-shadowss), var(--accent) 0px 0px 5px 5px;
+  background-color: var(--accent);
+  transform: scale(0.95);
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.css-checkbox {
+  color: blue;
+}
+
+.todo_text {
+  font-size: 20px;
+  flex-grow: 1;
+  padding-left: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
